@@ -6,8 +6,11 @@ const postAPI = createApi({
     baseUrl: "https://jsonplaceholder.typicode.com",
   }),
   endpoints: (build) => ({
-    getPost: build.query({
+    getPosts: build.query({
       query: () => "/posts",
+    }),
+    getPostDetails: build.query({
+      query: (id) => `posts/${id}`,
     }),
     addPost: build.mutation({
       query: (body) => ({
@@ -19,6 +22,6 @@ const postAPI = createApi({
   }),
 });
 
-export const { useGetPostQuery, useAddPostMutation } = postAPI;
+export const { useGetPostsQuery, useAddPostMutation, useGetPostDetailsQuery } = postAPI;
 
 export default postAPI;
