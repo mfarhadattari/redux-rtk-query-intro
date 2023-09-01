@@ -46,9 +46,7 @@ const AddPost = () => {
               {...register("userId")}
             />
           </div>
-          <button className="bg-pink-500 text-white px-3 py-2 w-full">
-            Add Post
-          </button>
+          <button className="bg-green-200  px-3 py-2 w-full">Add Post</button>
         </form>
       </div>
     </div>
